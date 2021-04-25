@@ -5,9 +5,47 @@
     <title>WEB-115 Final Project</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="">
+<style>
+    #banner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background:maroon;
+        color: grey;
+        font-size: 20px;
+        width: 100%;
+    }
+    
+    body{
+        background-color: #f1f1f1;
+    }
+    #resumeForm{
+        background-color: #ffffff;
+        margin: 100px auto;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+        display: inline-block;
+    }  
+</style>
 
 <body>
+    <div id="banner">
+        <h1>Luis Kellermann</h1>
+        <p>Web-115 Section .0003<br/>Build Your Resume</p> 
+    </div>
 
+    <form id=resumeForm>
+        <h1>Personal Information</h1>
+        <!-- Each div represents a single "section" for each step in the form-->
+        <div class="formSection">
+            <p>
+                <label for="fullName">Enter Your Full Name</label>
+                <input placeholder="Full Name here..." name="fullName">
+            </p>
+        </div>
+    </form>
 </body>
 
 </html>
