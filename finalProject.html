@@ -19,15 +19,33 @@
     body{
         background-color: #f1f1f1;
     }
+
+    #formCategory{
+        text-align: center;
+    }
+    
     #resumeForm{
         background-color: #ffffff;
-        margin: 100px auto;
-        font-family: 'Courier New', Courier, monospace;
+        margin: 0 auto; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif, monospace;
+        width: 50%;
+        position: relative;
+        top: 315px;
         padding: 40px;
-        width: 70%;
-        min-width: 300px;
-        display: inline-block;
-    }  
+    } 
+
+    input {
+        padding: 10px;
+        width: 90%;
+        font-size: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif, monospace;
+        border: 1px solid #aaaaaa;
+    }
+
+    label{
+        padding: 5px;
+    }
+
 </style>
 
 <body>
@@ -35,17 +53,48 @@
         <h1>Luis Kellermann</h1>
         <p>Web-115 Section .0003<br/>Build Your Resume</p> 
     </div>
-
     <form id=resumeForm>
-        <h1>Personal Information</h1>
+        <h1 id="formCategory">Personal Information</h1>
         <!-- Each div represents a single "section" for each step in the form-->
         <div class="formSection">
             <p>
-                <label for="fullName">Enter Your Full Name</label>
-                <input placeholder="Full Name here..." name="fullName">
+                <label for="fullName">Enter Your Full Name:</label><br/>
+                <input type="text" placeholder="Full Name here..." name="fullName">
             </p>
+            <p>
+                <label for="city">Enter Your City:</label><br/>
+                <input type="text" placeholder="City Name here..." name="city">
+            </p>
+            <p>
+                <label for="state">Enter Your State:</label><br/>
+                <input type="text" placeholder="State Name here..." name="state">
+            </p>
+            <p>
+                <label for="zipcode">Enter your Zip Code:</label><br/>
+                <input type="text" placeholder="Zip Code here..." name="zipcode">
+            </p>
+            <p>
+                <label for="phoneNumber">Enter Your Phone Number:</label><br/>
+                <input type="tel" placeholder="919-123-4567" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </p>
+            <p>
+                <label for="email">Enter your email:</label><br/>
+                <input type="email" placeholder="example@gmail.com" name="email">
+            </p>
+            <p>
+                <label for="socialsLink">Enter prefered Social Media Link:</label><br/>
+                <input placeholder="linked.com/in/profile" name="socialsLink">
+            </p>
+            <p>
+                <label for="portfolioLink">Enter Link to portfolio site:</label><br/>
+                <input placeholder="myPortfolioSite.com" name="portfolioLink">
+            </p>
+
+            <input type="submit" value="Create Resume">
         </div>
     </form>
+
+    
 </body>
 
 </html>
