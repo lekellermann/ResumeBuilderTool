@@ -21,7 +21,6 @@ function validateEmail()
     var email = myForm.email;
     if (isValidEmail(email.value))
     {
-        alert("This is a valid email address");
         generateResume();
     }
     else
@@ -37,6 +36,12 @@ document.getElementById("createResume").addEventListener("click", validateEmail)
 function generateResume()
 {
     var resumeWindow = window.open('about:blank','myPop');
-    // myText = ("<html>\n<head>\n<title>Welcome</title>\n</head>\n<body>\n");
-    // resumeWindow.document.write(myText);
+    myText = ("<html>\n<head>\n<title>Resume/CV</title>\n<meta name=\"viewport\"");
+    myText += ("content=\"width=device-width,initial-scale=1\"");
+    myText += ("<link rel=\"stylesheet\" href=\"\">\n</head>\n<body>\n");
+    var name = myForm.fullName.value;
+    var jobTitle = myForm.title.value;
+    myText += ("<h1 id=\"name\">" + name + "<br/><span id=\"jobTitle\">"+ jobTitle + "</span></h1>");
+    myText += ("</body>\n</html>");
+    resumeWindow.document.write(myText);
 }

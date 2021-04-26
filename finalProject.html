@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
 <meta charset="UTF-8">
     <title>WEB-115 Final Project</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -69,14 +69,14 @@
     }
 
 </style>
-
+</head>
 <body>
     <div id="banner">
         <h1>Luis Kellermann</h1>
         <p>Web-115 Section .0003<br/>Build Your Resume</p> 
     </div>
 
-    <form id=resumeForm name="resumeForm">
+    <form id="resumeForm" name="resumeForm">
         <h1 id="formCategory">Personal Information</h1>
         <!-- Personal information step of the form-->
         <div class="formSection">
@@ -84,6 +84,11 @@
                 <label for="fullName">Enter Your Full Name:</label><br/>
                 <input type="text" placeholder="Full Name here..." name="fullName">
             </p>
+            <p>
+                <label for="title">Enter your Job titlle:</label><br/>
+                <input type="text" placeholder="Fullstack Software Engineer, Software Engineer, Front-end Engineer, etc..." name="title">
+            </p>
+
             <p>
                 <label for="city">Enter Your City:</label><br/>
                 <input type="text" placeholder="City Name here..." name="city">
