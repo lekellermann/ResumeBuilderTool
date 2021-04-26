@@ -69,7 +69,7 @@
         <p>Web-115 Section .0003<br/>Build Your Resume</p> 
     </div>
 
-    <form id=resumeForm>
+    <form id=resumeForm name="resumeForm">
         <h1 id="formCategory">Personal Information</h1>
         <!-- Personal information step of the form-->
         <div class="formSection">
@@ -91,11 +91,12 @@
             </p>
             <p>
                 <label for="phoneNumber">Enter Your Phone Number:</label><br/>
-                <input type="tel" placeholder="919-123-4567" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <input type="tel" placeholder="919-123-4567" name="phoneNumber">
             </p>
             <p>
                 <label for="email">Enter your email:</label><br/>
                 <input type="email" placeholder="example@gmail.com" name="email">
+                <p id="emailAddress"></p>
             </p>
             <p>
                 <label for="socialsLink">Enter prefered Social Media Link:</label><br/>
@@ -106,7 +107,7 @@
                 <input placeholder="myPortfolioSite.com" name="portfolioLink">
             </p>
 
-            <input type="submit" value="Create Resume">
+            <input type="button" id="createResume" value="Create Resume">
         </div>
         <!--Key Skills step of the form-->
         <h1 id="formCategory">Key Skills</h1>
@@ -221,6 +222,8 @@
             </p>
         </div>
     </form>
+    <script src="projectJS.js">
+    </script>
 
     
 </body>
