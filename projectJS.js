@@ -2,11 +2,11 @@
 var myForm = document.resumeForm;
 
 
-// function checkEmail()
+// function checkFormElementValue()
 // {
 //     alert(email.value);
 // }
-// document.getElementById("createResume").addEventListener("click" , checkEmail);
+// document.getElementById("createResume").addEventListener("click" , checkFormElementValue);
 
 function isValidEmail(emailAddress)
 {
@@ -22,6 +22,7 @@ function validateEmail()
     if (isValidEmail(email.value))
     {
         alert("This is a valid email address");
+        generateResume();
     }
     else
     {
@@ -31,5 +32,11 @@ function validateEmail()
         email.style.borderColor = "red";
     }
 }
-
 document.getElementById("createResume").addEventListener("click", validateEmail);
+
+function generateResume()
+{
+    var resumeWindow = window.open('about:blank','myPop');
+    // myText = ("<html>\n<head>\n<title>Welcome</title>\n</head>\n<body>\n");
+    // resumeWindow.document.write(myText);
+}
