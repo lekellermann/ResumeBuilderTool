@@ -31,9 +31,16 @@
         width: 50%;
         position: relative;
         top: 315px;
-        padding: 60px;
+        padding: 75px;
+    }
+    .formSection
+    {
+        padding-bottom: 75px;
     } 
-
+ 
+    #education , #jobBox{
+        padding-bottom: 75px;
+    }
     input {
         padding: 10px;
         width: 90%;
@@ -106,8 +113,6 @@
                 <label for="portfolioLink">Enter Link to portfolio site:</label><br/>
                 <input placeholder="myPortfolioSite.com" name="portfolioLink">
             </p>
-
-            <input type="button" id="createResume" value="Create Resume">
         </div>
         <!--Key Skills step of the form-->
         <h1 id="formCategory">Key Skills</h1>
@@ -148,7 +153,7 @@
         <!-- Education step of the form-->
         <h1 id="formCategory">Educational Background</h1>
         <div class="formSection">
-            <p>
+            <p id="education">
                 <label for="education">Enter details relating to your Educational Background:</label><br/>
                 <textarea placeholder="Educational Background here...." rows="6" name="education" form=resumeForm></textarea>
             </p>
@@ -193,7 +198,7 @@
                 <label for="endDate">End Date:</label><br/>
                 <input id="endDate"type="Date" name="endDate">
             </p>
-            <p>
+            <p id="jobBox">
                 <label for="preivousJob2">Position Description:</label><br/>
                 <textarea placeholder="Company, Position, Role/Responsibilities" rows="6" name="preivousJob2" form=resumeForm></textarea>
             </p>
@@ -221,6 +226,9 @@
                 <textarea placeholder="Professional Relationship, Contact information" rows="6" name="refernce3" form=resumeForm></textarea>
             </p>
         </div>
+        <p>
+            <input type="button" id="createResume" value="Create Resume">
+        </p>
     </form>
     <script src="projectJS.js">
     </script>
