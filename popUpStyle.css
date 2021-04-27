@@ -11,9 +11,9 @@ body{
     overflow: hidden;
 }
 #headshot{
-    position: absolute;
-    left: 55px;
-    top: 50px;
+    position: relative;
+    left: -200px;
+    top: 195px;
 }
 img{
     border-radius: 50%;
@@ -38,20 +38,22 @@ img{
 }
 #leftColumn{
     clear:both;
-    width:15%;
+    width:auto;
     float:left;
-    position: absolute;
-    left: 100px;
-    top: 350px;
-    overflow: hidden;
+    position: relative;
+    left: -250px;
+    top: -145px;
+    height: auto;
 }
 #rightColumn {
-    width:83%;
+    width:auto;
+    height: auto;
     float:right;
     padding-bottom:20px;
     padding-right:30px;
-    position:absolute;
-    top: 320px
+    position:relative;
+    top: -160px;
+    right: -775px;
   }
 #profile {
     font-family: monospace;
