@@ -37,11 +37,16 @@ function generateResume()
 {
     var resumeWindow = window.open('about:blank','myPop');
     myText = ("<html>\n<head>\n<title>Resume/CV</title>\n<meta name=\"viewport\"");
-    myText += ("content=\"width=device-width,initial-scale=1\"");
-    myText += ("<link rel=\"stylesheet\" href=\"\">\n</head>\n<body>\n");
+    myText += ("content=\"width=device-width,initial-scale=1\">");
+    myText += ("<link rel=\"stylesheet\" href=\"popUpStyle.css\">\n</head>\n<body>\n");
+    
     var name = myForm.fullName.value;
     var jobTitle = myForm.title.value;
-    myText += ("<h1 id=\"name\">" + name + "<br/><span id=\"jobTitle\">"+ jobTitle + "</span></h1>");
+    var headshot = myForm.headshot.value;
+    headshot = headshot.substring(12);
+    
+    myText += ("<div id=headshot><img src=\"" + headshot + "\"width=\"165\" height=\"165\"></div>\n<h1 id=\"name\">"+ name + "<br/><span id=\"jobTitle\">"+ jobTitle + "</span></h1>");
+    myText += ("<div></div>");
     myText += ("</body>\n</html>");
     resumeWindow.document.write(myText);
 }

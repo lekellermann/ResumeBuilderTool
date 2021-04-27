@@ -1,0 +1,17 @@
+#headshot{
+    position: absolute;
+    left: 55px;
+    top: 30px;
+}
+img{
+    border-radius: 50%;
+}
+#name{
+    position: relative;
+    left: 236.671px;
+    top: 56.75px;
+    font-size: 45;
+}
+#jobTitle{
+    color: #bd2509
+}

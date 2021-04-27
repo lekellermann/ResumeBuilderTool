@@ -67,6 +67,10 @@
     #startDate, #endDate{
         width:40%;
     }
+    #headshot{
+        width:19%;
+        border: none;
+    }
 
 </style>
 </head>
@@ -80,6 +84,10 @@
         <h1 id="formCategory">Personal Information</h1>
         <!-- Personal information step of the form-->
         <div class="formSection">
+            <p>
+                <label for="headshot">Upload a professional headshot if available:</label><br/>
+                <input type="file" id="headshot" accept="image/png, image/jpeg" name="headshot">
+            </p>
             <p>
                 <label for="fullName">Enter Your Full Name:</label><br/>
                 <input type="text" placeholder="Full Name here..." name="fullName">
