@@ -60,7 +60,6 @@ function generateResume()
     myText +=("<p class= \"info\">LinkedIn Profile: " + linkedIn +"</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
     myText += ("</p>\n</div></body>\n</html>");
     
-    myText += ("</div>");
-    myText += ("</body>\n</html>");
+
     resumeWindow.document.write(myText);
 }

@@ -5,7 +5,7 @@ body{
     position: relative;
     background-color: #ffffff;
     margin: 0 auto; 
-    width: 65%;
+    width: 50%;
     top: 100px;
     padding: 250px;
     height: max-content;
@@ -13,7 +13,7 @@ body{
 #headshot{
     position: absolute;
     left: 55px;
-    top: 30px;
+    top: 50px;
 }
 img{
     border-radius: 50%;
@@ -21,7 +21,7 @@ img{
 #name{
     position: absolute;
     left: 236.671px;
-    top: 66.75px;
+    top: 85.75px;
     font-size: 25;
 }
 #jobTitle{
