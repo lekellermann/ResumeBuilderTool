@@ -57,8 +57,10 @@ function generateResume()
 
     myText += ("<div id=\"personalInfo\">\n<p class =\"info\">" + city + ", " + state + "," + zipcode + "</p>");
     myText += ("<p class=\"info\">Email: " + email + "</p>" + "<p class=\"info\">Phone Number: " + phoneNumber)
-    myText +=("<p class= \"info\">LinkedIn Profile: " + linkedIn +"</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
-    myText += ("</p>\n</div></body>\n</html>");
+    myText +=("<p class= \"info\">LinkedIn : " + linkedIn +"</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
+    myText += ("<div id=\"leftColumn\"><p id=\"profile\">Profile</p></div>");
+    myText += ("<div id=\"rightColumn\"><p id=\"profile\">Profile</p></div>");
+    myText += ("\n</div></body>\n</html>");
     
 
     resumeWindow.document.write(myText);
