@@ -2,40 +2,40 @@ body{
     background-color: #f1f1f1;
 }
 #resumeContainer{
-    max-width: 1350px;
+    max-width: 1200px;
     background-color: #ffffff;
     margin: 0px auto 0px;
     margin-top:50px;
     padding: 60px;
-
 }
 #headerContainer{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    height: 20%;
 }
-
 img{
     border-radius: 50%;
+    position: relative;
+    top: -7px;
+    left: 25px;
 }
-#nameContainer{
+#nameAndInfo{
     margin-bottom: 5px;
     position: relative;
     top:-185px;
-    left: 185px;
 }
 #name{
     font-size: 45;
     text-transform: uppercase;
     font-family: sans-serif, monospace;
     letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    left: 245px;
+    width: 31%;
 }
 #lastName{
     color: #bd2509
-}
-#jobContainer{
-    margin-bottom:20px;
-    position: relative;
-    top: -210px;
-    left: 185px;
 }
 #jobTitle{
     color:black;
@@ -45,34 +45,31 @@ img{
 }
 #infoContainer{
   margin-bottom: 10px;
-  right: 0;
   position: relative;
-  top:-375px;
+  top: -175px;
+  margin-top: 25px;
 }
 .info{
     font-family:sans-serif, monospace;
     font-size: 20px;
     text-align: right;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
-#profileSection
-{
+.resumeContent{
+    line-height: 20px;
+}
+.resumeSection{
     margin-bottom: 40px;
-    height: 5%;
-    position: relative;
-    top: -325px
+}
+.sectionTitle{
+    
 }
 .leftColumn{
     clear: both;
     width: 15%;
     float: left;
     padding-left: 30px;
-}
-#profileHeader{
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 25px;
-    text-align: right;
 }
 #rightColumn {
     width:auto;
