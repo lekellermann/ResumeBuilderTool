@@ -63,8 +63,11 @@ function generateResume()
     myText += ("<div id=\"infoContainer\"><p class=\"info\">" + city + ", " + state + ", " + zipcode + "</p>");
     myText += ("<p class=\"info\">Email: " + email + "</p><p class=\"info\">Phone Number: " + phoneNumber + "</p>");
     myText += ("<p class=\"info\">LinkedIn: " + linkedIn + "</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
-    myText += ("</div>");
 
+    var developerProfile = myForm.developerProfile.value;
+
+    myText += ("<div id=\"profileSection\"><div class=\"leftColumn\"><h1 id=\"profileHeader\">Developer Profile</h1></div></div>");
+    myText += ("</div>");
 
     // myText += ("<div id=\"leftColumn\"><p id=\"profile\">Profile</p></div>");
     // myText += ("<div id=\"rightColumn\"><div class=\"dividers\"></div></div>");
