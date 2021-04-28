@@ -46,12 +46,14 @@ function generateResume()
     var headshot = myForm.headshot.value;
     headshot = headshot.substring(12);
 
+    // Start of resume Container
     myText += ("<div id=\"resumeContainer\">");
-    myText += ("<div id=\"headerContainer\"><img src=\"" + headshot + "\"width=\"165\" height=\"165\">");
-    myText += ("<div id=\"nameContainer\"><h1 id=\"name\"><span id=\"firstName\">" + firstName + "</span><br>")
-    myText += ("<span id=\"lastName\">" + lastName + "</span></h1></div>");
-    myText += ("<div id=\"jobContainer\"><span id=\"jobTitle\">" + jobTitle + "</span></div>");
-
+    
+    // Start of header Container & Name /Info Container 
+    myText += ("<div id=\"headerContainer\"><img src=\"" + headshot + "\"width=\"165\" height=\"165\"><div id=\"nameAndInfo\">");
+    myText +=("<h1 id=\"name\"><span id=\"firstName\">" + firstName + "</span><br><span id=\"lastName\">" + lastName + "</span>");
+    myText += ("<br><span id=\"jobTitle\">" + jobTitle + "</span></h1>");   
+    
     var city = myForm.city.value;
     var state = myForm.state.value;
     var zipcode = myForm.zipcode.value;
@@ -59,15 +61,31 @@ function generateResume()
     var email = myForm.email.value;
     var linkedIn= myForm.socialsLink.value;
     var portfolio = myForm.portfolioLink.value;
-
-    myText += ("<div id=\"infoContainer\"><p class=\"info\">" + city + ", " + state + ", " + zipcode + "</p>");
-    myText += ("<p class=\"info\">Email: " + email + "</p><p class=\"info\">Phone Number: " + phoneNumber + "</p>");
-    myText += ("<p class=\"info\">LinkedIn: " + linkedIn + "</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
+    
+    // Start of personal info Container
+    myText += ("<div id=\"infoContainer\"><p class=\"info\">" + city + ", " + state + ", " + zipcode + "</p>")
+    myText += ("<p class=\"info\">Phone Number: " + phoneNumber + "</p>");
+    myText += ("<p class=\"info\">Email: " + email + "</p>");
+    myText += ("<p class=\"info\">LinkedIn: " + linkedIn + "</p><p class=\"info\">Portfolio: " + portfolio + "</p>");
+    //End of personal Info Container, name/Info, and header Container
+    myText += ("</div></div></div>")
 
     var developerProfile = myForm.developerProfile.value;
-
-    myText += ("<div id=\"profileSection\"><div class=\"leftColumn\"><h1 id=\"profileHeader\">Developer Profile</h1></div></div>");
+    
+    // Start of main resume content Container and first Section
+    myText += ("<div class=\"resumeContent\"><div class=\"resumeSection\">");
+    // Start of section title container
+    myText += ("<div class=\"sectionTitle\"></div>")
+    
+    // End of first Section
+    myText += ("</div>")
+    
+    // End of resume Content container
     myText += ("</div>");
+    
+
+    // myText += ("<div id=\"profileSection\"><div class=\"leftColumn\"><h1 id=\"profileHeader\">Developer Profile</h1></div></div>");
+    // myText += ("</div>");
 
     // myText += ("<div id=\"leftColumn\"><p id=\"profile\">Profile</p></div>");
     // myText += ("<div id=\"rightColumn\"><div class=\"dividers\"></div></div>");
