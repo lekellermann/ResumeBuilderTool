@@ -40,13 +40,18 @@ function generateResume()
     myText += ("content=\"width=device-width,initial-scale=1.0\">");
     myText += ("<link rel=\"stylesheet\" href=\"popUpStyle.css\">\n</head>\n<body>\n");
     
-    var name = myForm.fullName.value;
+    var firstName = myForm.firstName.value;
+    var lastName = myForm.lastName.value
     var jobTitle = myForm.title.value;
     var headshot = myForm.headshot.value;
     headshot = headshot.substring(12);
     
-    myText += ("<div id=\"resumeContainer\"><div id=\"headshot\"><img src=\"" + headshot + "\"width=\"165\" height=\"165\"></div>\n<h1 id=\"name\">"+ name + "<br/><span id=\"jobTitle\">"+ jobTitle + "</span></h1>");
-    
+    myText += ("<div id=\"resumeContainer\">");
+    myText += ("<div id=\"headerContainer\"><img src=\"" + headshot + "\"width=\"165\" height=\"165\">");
+    myText += ("<div id=\"nameContainer\"><h1 id=\"name\"><span id=\"firstName\">" + firstName + "</span><br>")
+    myText += ("<span id=\"lastName\">" + lastName + "</span></h1></div>");
+    myText += ("<div id=\"jobContainer\"><span id=\"jobTitle\">" + jobTitle + "</span></div>");
+
     var city = myForm.city.value;
     var state = myForm.state.value;
     var zipcode = myForm.zipcode.value;
@@ -55,11 +60,14 @@ function generateResume()
     var linkedIn= myForm.socialsLink.value;
     var portfolio = myForm.portfolioLink.value;
 
-    myText += ("<div id=\"personalInfo\">\n<p class =\"info\">" + city + ", " + state + "," + zipcode + "</p>");
-    myText += ("<p class=\"info\">Email: " + email + "</p>" + "<p class=\"info\">Phone Number: " + phoneNumber)
-    myText +=("<p class= \"info\">LinkedIn : " + linkedIn +"</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
-    myText += ("<div id=\"leftColumn\"><p id=\"profile\">Profile</p></div>");
-    myText += ("<div id=\"rightColumn\"><div class=\"dividers\"></div></div>");
+    myText += ("<div id=\"infoContaier\"><p class=\"info\"></p></div></div>");
+
+
+    // myText += ("<div id=\"resumeHeader\">\n<p class =\"info\">" + city + ", " + state + "," + zipcode + "</p>");
+    // myText += ("<p class=\"info\">Email: " + email + "</p>" + "<p class=\"info\">Phone Number: " + phoneNumber)
+    // myText +=("<p class= \"info\">LinkedIn : " + linkedIn +"</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
+    // myText += ("<div id=\"leftColumn\"><p id=\"profile\">Profile</p></div>");
+    // myText += ("<div id=\"rightColumn\"><div class=\"dividers\"></div></div>");
     myText += ("\n</div></body>\n</html>");
     
 
