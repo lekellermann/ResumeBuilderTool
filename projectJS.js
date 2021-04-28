@@ -45,7 +45,7 @@ function generateResume()
     var jobTitle = myForm.title.value;
     var headshot = myForm.headshot.value;
     headshot = headshot.substring(12);
-    
+
     myText += ("<div id=\"resumeContainer\">");
     myText += ("<div id=\"headerContainer\"><img src=\"" + headshot + "\"width=\"165\" height=\"165\">");
     myText += ("<div id=\"nameContainer\"><h1 id=\"name\"><span id=\"firstName\">" + firstName + "</span><br>")
@@ -60,12 +60,12 @@ function generateResume()
     var linkedIn= myForm.socialsLink.value;
     var portfolio = myForm.portfolioLink.value;
 
-    myText += ("<div id=\"infoContaier\"><p class=\"info\"></p></div></div>");
+    myText += ("<div id=\"infoContainer\"><p class=\"info\">" + city + ", " + state + ", " + zipcode + "</p>");
+    myText += ("<p class=\"info\">Email: " + email + "</p><p class=\"info\">Phone Number: " + phoneNumber + "</p>");
+    myText += ("<p class=\"info\">LinkedIn: " + linkedIn + "</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
+    myText += ("</div>");
 
 
-    // myText += ("<div id=\"resumeHeader\">\n<p class =\"info\">" + city + ", " + state + "," + zipcode + "</p>");
-    // myText += ("<p class=\"info\">Email: " + email + "</p>" + "<p class=\"info\">Phone Number: " + phoneNumber)
-    // myText +=("<p class= \"info\">LinkedIn : " + linkedIn +"</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
     // myText += ("<div id=\"leftColumn\"><p id=\"profile\">Profile</p></div>");
     // myText += ("<div id=\"rightColumn\"><div class=\"dividers\"></div></div>");
     myText += ("\n</div></body>\n</html>");
