@@ -2,39 +2,57 @@ body{
     background-color: #f1f1f1;
 }
 #resumeContainer{
-    position: relative;
+    max-width: 1350px;
     background-color: #ffffff;
-    margin: 0 auto; 
-    width: 40%;
-    top: 50px;
-    padding: 250px;
-    overflow: hidden;
+    margin: 0px auto 0px;
+    margin-top:50px;
+    padding:40px;
+
 }
-#headshot{
-    position: relative;
-    left: -200px;
-    top: -195px;
+#headerContainer{
+    margin-bottom: 30px;
 }
+
 img{
     border-radius: 50%;
 }
-#name{
-    position: absolute;
-    left: 236.671px;
-    top: 85.75px;
-    font-size: 25;
+#nameContainer{
+    margin-bottom: 5px;
+    position: relative;
+    top:-195px;
+    left: 185px;
 }
-#jobTitle{
+#name{
+    font-size: 45;
+    text-transform: uppercase;
+    font-family: sans-serif, monospace;
+    letter-spacing: 0.05em;
+}
+#lastName{
     color: #bd2509
 }
-#personalInfo{
-    position: absolute;
+#jobContainer{
+    margin-bottom:20px;
+    position: relative;
+    top: -227px;
+    left: 185px;
+}
+#jobTitle{
+    color:black;
+    font-size:30;
+    font-family:'Lucida Sans' , monospace;
+    font-weight: 700;
+}
+#infoContainer{
+  margin-bottom: 10px;
+  right: 0;
+  position: relative;
+  top:-375px;
+}
+.info{
+    font-family:sans-serif, monospace;
     font-size: 20px;
     text-align: right;
-    font-family: sans-serif;
-    right: 50px;
-    top: 35px;
-    width: 30%
 }
 #leftColumn{
     clear:both;
