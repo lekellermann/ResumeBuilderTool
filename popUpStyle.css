@@ -13,7 +13,7 @@ body{
 #headshot{
     position: relative;
     left: -200px;
-    top: 195px;
+    top: -195px;
 }
 img{
     border-radius: 50%;
@@ -41,7 +41,7 @@ img{
     width:auto;
     float:left;
     position: relative;
-    left: -250px;
+    left: -130px;
     top: -145px;
     height: auto;
 }
@@ -63,7 +63,9 @@ img{
     text-align: right;
     height: max-content
 }
-/* .dividers{
-
-} */
+.dividers{
+    width: 598.667px; 
+    height: 3.71843px; 
+    transform: translate(228px, 275.998px);
+}
 

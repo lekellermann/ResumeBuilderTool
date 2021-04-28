@@ -59,7 +59,7 @@ function generateResume()
     myText += ("<p class=\"info\">Email: " + email + "</p>" + "<p class=\"info\">Phone Number: " + phoneNumber)
     myText +=("<p class= \"info\">LinkedIn : " + linkedIn +"</p><p class=\"info\">Portfolio: " + portfolio + "</p></div>");
     myText += ("<div id=\"leftColumn\"><p id=\"profile\">Profile</p></div>");
-    myText += ("<div id=\"rightColumn\"><p id=\"profile\">Profile</p></div>");
+    myText += ("<div id=\"rightColumn\"><div class=\"dividers\"></div></div>");
     myText += ("\n</div></body>\n</html>");
     
 
