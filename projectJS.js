@@ -158,11 +158,6 @@ function generateResume()
     // End of section title container
     myText += ("</div>");
 
-    // var keySkills = [
-    //     myForm.softSkills.value,
-    //     myForm.brandingSkills.value,
-    //     myForm.skillsetChoice.value
-    // ];
     var skills1 = myForm.softSkills.value;
     var skillsArray = skills1.split(",");
 
@@ -221,12 +216,108 @@ function generateResume()
     myText += ("</div>");
     
     // End of key Skills container content section(right column)
-    myText += ("</div>")
+    myText += ("</div>");
 
     /**  
       * End of key Skills resumeSection (title + content sections)
     */
       myText += ("</div>");
+
+
+    /**
+     * Start of Technical Skills Section
+     */
+    // Start of Key Skills Experience Section(this line includes section title container)
+    myText += ("<div class =\"resumeSection\"><div class=\"sectionTitle\"><div class=\"leftColumn\">");
+    myText += ("<h1 class=\"profileHeader\">Technical Skills</h1>");
+    // End of left Column, beginning/end of rightColumn
+    myText += ("</div><div class=\"rightColumn\"><div class=\"dividers\"></div></div>");  
+    // End of section title container
+    myText += ("</div>");
+
+
+    var techSkills1 = myForm.programmingLanguages.value;
+    var techSkillsArray1 = techSkills1.split(",");
+
+    // Start of right Column for Key skills content, and right column(skills)
+    myText +=("<div class=\"skillsContainer\"><div class=\"techSkillsrightColumn\"><div class =\"techSkillsContent\">");
+    
+    myText += ("<span class=\"techSkill\">Programming Languages</span>");
+
+    // // Start of unordered list for key skills description
+    myText += ("<ul class=\"techskillsDescription\">");
+    
+    for (var j = 0; j < techSkillsArray1.length; j++)
+    {
+        myText += ("<li>" + techSkillsArray1[j] + "</li>");
+    }
+
+    // End of unordered list for key skills description
+    myText += ("</ul>");
+
+    // End of key skills category container(inside right column(skills category + description))
+    myText += ("</div>");
+    
+    // New  key skill category container(inside right column(skill category + description))
+    myText += ("<div class=\"techSkillsContent\"><span class=\"techSkill\">Frameworks</span>");
+    
+    var techskills2 = myForm.frameworks.value;
+    var techskillsArray2 = techskills2.split(",");
+
+    myText += ("<ul class=\"techskillsDescription\">");
+    
+    for (var j = 0; j < techskillsArray2.length; j++)
+    {
+        myText += ("<li>" + techskillsArray2[j] + "</li>");
+    }
+
+    // End of skills category container (inside right column(skill category + description))
+    myText +=  ("</div>")
+
+    // New  key skill category container(inside right column(skill category + description))
+    myText += ("<div class=\"techSkillsContent\"><span class=\"techSkill\">Software Dev. Tools</span>");
+    
+    var techskills3 = myForm.softwareTools.value;
+    var techskillsArray3 = techskills3.split(",");
+
+    myText += ("<ul class=\"techskillsDescription\">");
+    
+    for (var j = 0; j < techskillsArray3.length; j++)
+    {
+        myText += ("<li>" + techskillsArray3[j] + "</li>");
+    }
+
+    // End of skills category container (inside right column(skill category + description))
+    myText +=  ("</div>")
+    
+    // New  key skill category container(inside right column(skill category + description))
+    myText += ("<div class=\"techSkillsContent\"><span class=\"techSkill\">Software Dev. Methedologies</span>");
+    
+    var techskills4 = myForm.softwareMethedologies.value;
+    var techskillsArray4 = techskills4.split(",");
+
+    myText += ("<ul class=\"techskillsDescription\">");
+    
+    for (var j = 0; j < techskillsArray4.length; j++)
+    {
+        myText += ("<li>" + techskillsArray4[j] + "</li>");
+    }
+
+    // End of skills category container (inside right column(skill category + description))
+    myText +=  ("</div>")
+        
+    // End of right column
+    myText += ("</div>");
+    
+    // End of key Technical container content section(right column)
+    myText += ("</div>");
+    /**  
+      * End of Technical Skills resumeSection (title + content sections)
+    */
+    myText += ("</div>");
+
+
+
 
 
 
