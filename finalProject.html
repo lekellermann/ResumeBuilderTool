@@ -64,7 +64,7 @@
         padding-bottom: 10px ;
         left: 0;
     }
-    .startDate, .endDate, #jobInput{
+    .startDate, .endDate, #jobInput, .schoolstartDate, .schoolendDate{
         width:40%;
     }
     #headshot{
@@ -178,9 +178,17 @@
         <!-- Education step of the form-->
         <h1 id="formCategory">Educational Background</h1>
         <div class="formSection">
+            <p>
+                <label for="educationDates">Start Date:</label><br/>
+                <input class="schoolstartDate"type="Date" name="educationDates">
+            </p>
+            <p>
+                <label for="educationDates">End Date:</label><br/>
+                <input class="schoolendDate"type="Date" name="educationDates">
+            </p>
             <p id="education">
                 <label for="education">Enter details relating to your Educational Background:</label><br/>
-                <textarea placeholder="Format(period separated): Degree Earned. School Attended." rows="6" name="education" form=resumeForm></textarea>
+                <textarea placeholder="Format(comma separated): Degree Earned, School Attended." rows="6" name="education" form=resumeForm></textarea>
             </p>
         </div>
         <!-- Work Expereicne step of the form -->
