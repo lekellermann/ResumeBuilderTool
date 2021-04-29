@@ -1,13 +1,6 @@
 // Global variable which references the form resumeForm
 var myForm = document.resumeForm;
 
-
-// function checkFormElementValue()
-// {
-//     alert(email.value);
-// }
-// document.getElementById("createResume").addEventListener("click" , checkFormElementValue);
-
 function isValidEmail(emailAddress)
 {
     // Regualr Expression for a valid email Address
@@ -74,9 +67,15 @@ function generateResume()
     
     // Start of main resume content Container and first Section
     myText += ("<div class=\"resumeContent\"><div class=\"resumeSection\">");
-    // Start of section title container
-    myText += ("<div class=\"sectionTitle\"></div>")
-    
+    // Start of section title container(includes left and right columns)
+    myText += ("<div class=\"sectionTitle\"><div class=\"leftColumn\"><h1 id=\"profileHeader\">Developer Profile</h1>");
+    // End of leftColumn beginning/end of rightColumn
+    myText += ("</div><div class =\"rightColumn\"><div class=\"dividers\"></div></div>")
+    // End of section title Container
+    myText += ("</div>")
+
+    // Developer Profile Content
+    myText += ("<div class =\"rightColumn\"><div class=\"content\">" + developerProfile + "</div></div>");
     // End of first Section
     myText += ("</div>")
     
@@ -84,11 +83,9 @@ function generateResume()
     myText += ("</div>");
     
 
-    // myText += ("<div id=\"profileSection\"><div class=\"leftColumn\"><h1 id=\"profileHeader\">Developer Profile</h1></div></div>");
-    // myText += ("</div>");
-
-    // myText += ("<div id=\"leftColumn\"><p id=\"profile\">Profile</p></div>");
-    // myText += ("<div id=\"rightColumn\"><div class=\"dividers\"></div></div>");
+  
+    
+    // End of Pop Up window 
     myText += ("\n</div></body>\n</html>");
     
 
