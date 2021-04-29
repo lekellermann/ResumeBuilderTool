@@ -97,6 +97,10 @@ function generateResume()
         myForm.position2.value,
         myForm.position3.value
     ]
+    var startDates = document.getElementsByClassName("startDate");
+    var endDates = document.getElementsByClassName("endDate");
+    var jobDescription = myForm.jobDescription.value;
+    var jobArray = jobDescription.split(".");
     
     // Start of work Experience Section(this line includes section title container)
     myText += ("<div class =\"resumeSection\"><div class=\"sectionTitle\"><div class=\"leftColumn\">");
@@ -106,73 +110,79 @@ function generateResume()
     // End of section title container
     myText += ("</div>");
 
-
-    var startDates = document.getElementsByClassName("startDate");
-    var endDates = document.getElementsByClassName("endDate");
-    var jobDescription = myForm.jobDescription.value;
-    var jobArray = jobDescription.split(".");
-    
     for (var i = 0; i < 3; i++)
     {
-        // Work Experience Content Section
-        myText += ("<div class=\"experienceContainer\"><div class=\"leftColumn\"><h2 class=\"position\">" + position[i] + "</h2>");
+        // Start of work Experience Content Section, end of left column(position)
+        myText += ("<div class=\"experienceContainer\"><div class=\"leftColumn\"><h2 class =\"position\">" + position[0] + "</h2></div>");
+        // Start of right column(company + description) including <div> inside right column(job description)
+        myText += ("<div class=\"rightColumn\"><div class=\"experienceContent\"><span class=\"company\">" + company[0]);
+        
+        // Start and end date inside <span> inside right column(job description)
+        myText += ("(" + startDates[0].value.substring(0,4) + " - " + endDates[0].value.substring(0,4) + ")");
+        // End of company and date </span>
+        myText += ("</span>");
 
-        // End of left Column, beginning of right column
-        myText += ("</div><div class=\"rightColumn\"><div class=\"experienceContent\"><span class=\"company\">" + company[i]);
-
-        // Company span
-        myText += ("(" + startDates[i].value.substring(0,4) + " - " + endDates[i].value.substring(0,4) + ")" +"</span>");
-
+        // Start  of unordered List for job description
         myText += ("<ul class=\"jobDescription\">")
         for (var j = 0; j < jobArray.length - 1; j++)
         {
-            myText += ("<li>" + jobArray[j] +"</li>");
+            myText +=("<li>" + jobArray[j] + "</li>")
         }
-        // End of work content Section
+        // End of unorder list for job description
         myText += ("</ul>");
-        // End of Right column
+
+        // End of job description <div> inside right column (company  + description)
+        myText += ("</div>");
+        
+        // End of right column(company and Description(content))
         myText += ("</div>");
 
-
-        // End of work experience content Section
-        myText += ("</div>");
+        // End of experienceContainer
+        myText +=("</div>")
     }
-    // // Work Experience Content Section
-    // myText += ("<div class=\"experienceContainer\"><div class=\"leftColumn\"><h2 class=\"position\">" + position[0] + "</h2>");
-    
-    // // End of left Column, beginning of right column
-    // myText += ("</div><div class=\"rightColumn\"><div class=\"experienceContent\"><span class=\"company\">" + company[0]);
-    
-    // // Company span
-    // myText += ("(" + startDates[0].value.substring(0,4) + " - " + endDates[0].value.substring(0,4) + ")" +"</span>");
-    
-    // myText += ("<ul>")
-    // for (var j = 0; j < jobArray.length - 1; j++)
+     /**  
+      * End of Work experience resumeSection (title + content sections)
+    */
+      myText += ("</div>");
+
+    // Work Experience info section
+    // for (var i = 0; i < 3; i++)
     // {
-    //     myText += ("<li>" + jobArray[j] +"</li>");
-    // }
-    // // End of work content Section
-    // myText += ("</ul>");
-    // // End of Right column
-    // myText += ("</div>");
+    //     // Work Experience Content Section
+    //     myText += ("<div class=\"experienceContainer\"><div class=\"leftColumn\"><h2 class=\"position\">" + position[i] + "</h2>");
 
-    
-    // // End of work experience content Section
-    // myText += ("</div>");
+    //     // End of left Column, beginning of right column
+    //     myText += ("</div><div class=\"rightColumn\"><div class=\"experienceContent\"><span class=\"company\">" + company[i]);
 
+    //     // Company span
+    //     myText += ("(" + startDates[i].value.substring(0,4) + " - " + endDates[i].value.substring(0,4) + ")" +"</span>");
 
-    // End of Work experience Section
+    //     myText += ("<ul class=\"jobDescription\">")
+    //     for (var j = 0; j < jobArray.length - 1; j++)
+    //     {
+    //         myText += ("<li>" + jobArray[j] +"</li>");
+    //     }
+    //     // End of work content Section
+    //     myText += ("</ul>");
+    //     // End of Right column
+    //     myText += ("</div>");
+
+ 
+    /**
+     * Start of Key Skills Section
+     */
+    // Start of work Experience Section(this line includes section title container)
+    myText += ("<div class =\"resumeSection\"><div class=\"sectionTitle\"><div class=\"leftColumn\">");
+    myText += ("<h1 class=\"profileHeader\">Key Skills</h1>");
+    // End of left Column, beginning/end of rightColumn
+    myText += ("</div><div class=\"rightColumn\"><div class=\"dividers\"></div></div>");  
+    // End of section title container
     myText += ("</div>");
-    
 
     /**
      *  End of resume Content container
      */
     myText += ("</div>");
-    
-
-  
-    
     // End of Pop Up window 
     myText += ("\n</div></body>\n</html>");
     
