@@ -74,16 +74,16 @@ img{
     position: relative;
     top: -20px;
 }
-#profileHeader
+.profileHeader
 {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-size: 25px;
     text-align: right;
+    margin-bottom: 5px;
 }
 .rightColumn {
     width:60%;
-    padding-bottom:20px;
     padding-right:30px;
     position: relative;
     float: right; 
@@ -98,5 +98,28 @@ img{
     position: relative;
     top: -15px;
 }
-
-
+.position{
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: right;
+    color: #bd2509;
+    margin-top: 0px;
+}
+.experienceContainer{
+    margin-bottom: 15px;
+}
+.experienceContent{
+    margin-bottom: 15px;
+}
+.company{
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: -20px;
+}
+.jobDescription{
+    position: relative;
+    top: -25px;
+    margin-top: 5px;
+}
