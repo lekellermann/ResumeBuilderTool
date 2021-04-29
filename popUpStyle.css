@@ -145,3 +145,24 @@ img{
     float: left;
     margin-right: 65px;
 }
+.techSkillsContent{
+    margin-bottom: 45px;
+    width:15%;
+    float: left;
+    margin-right: 30px;
+}
+.techskillsDescription{
+    margin-top: 5px;
+    padding-left: 18px;
+}
+.techSkillsrightColumn {
+    padding-right:30px;
+    position: relative;
+    float: right; 
+    left: -27px;
+  }
+  .techSkill{
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+}
