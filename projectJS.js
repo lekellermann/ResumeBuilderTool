@@ -223,7 +223,6 @@ function generateResume()
     */
       myText += ("</div>");
 
-
     /**
      * Start of Technical Skills Section
      */
@@ -316,12 +315,61 @@ function generateResume()
     */
     myText += ("</div>");
 
+    /**
+     * Start of Education Section
+     */
+    // Start of Key Skills Experience Section(this line includes section title container)
+    myText += ("<div class =\"resumeSection\"><div class=\"sectionTitle\"><div class=\"leftColumn\">");
+    myText += ("<h1 class=\"profileHeader\">Education</h1>");
+    // End of left Column, beginning/end of rightColumn
+    myText += ("</div><div class=\"rightColumn\"><div class=\"dividers\"></div></div>");  
+    // End of section title container
+    myText += ("</div>");
+
+    var education = myForm.education.value;
+    var educationArray = education.split(",");
+    var degree = educationArray[0];
+    var school = educationArray[1];
+    var schoolDates = document.getElementsByName("educationDates");
+
+    // Start of Eduucation Content section(contains left column with degree header)
+    myText += ("<div class=\"educationContainer\"><div class=\"leftColumn\"><h2 class=\"degree\">" + degree + "</h2></div>");
+    
+    // Start of right column(college attended )
+    myText += ("<div class=\"rightColumn\"><div class=\"educationContent\">");
+    myText += ("<span class=\"college\">" + school);
+
+    myText += ("(" + schoolDates[0].value.substring(0,4) + " - " + schoolDates[1].value.substring(0,4) + ")");
+    
+    // End of school and date </span>
+    myText += ("</span>");
+
+    // End of rightColumn and educationContentSection
+    myText += ("</div></div>");
+    // End of education content block(degree + college)
+    myText += ("</div>");
+    
+    /**  
+      * End of Education  resumeSection (title + content)
+    */
+     myText += ("</div>");
 
 
+     /**
+     * Start of references Section
+     */
+     // Start of Key Skills Experience Section(this line includes section title container)
+    myText += ("<div class =\"resumeSection\"><div class=\"sectionTitle\"><div class=\"leftColumn\">");
+    myText += ("<h1 class=\"profileHeader\">Education</h1>");
+    // End of left Column, beginning/end of rightColumn
+    myText += ("</div><div class=\"rightColumn\"><div class=\"dividers\"></div></div>");  
+    // End of section title container
+    myText += ("</div>");
 
-
-
-
+    /**  
+      * End of References resumeSection (title + content)
+    */
+     myText += ("</div>");
 
 
 
@@ -333,6 +381,8 @@ function generateResume()
     // End of Pop Up window 
     myText += ("\n</div></body>\n</html>");
     
-
+    // Writes the string to the new popUp window
     resumeWindow.document.write(myText);
+
+    // End of the generateResume() functio
 }
