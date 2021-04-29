@@ -1,6 +1,7 @@
 // Global variable which references the form resumeForm
 var myForm = document.resumeForm;
 
+
 function isValidEmail(emailAddress)
 {
     // Regualr Expression for a valid email Address
@@ -96,7 +97,8 @@ function generateResume()
         myForm.position1.value,
         myForm.position2.value,
         myForm.position3.value
-    ]
+    ];
+
     var startDates = document.getElementsByClassName("startDate");
     var endDates = document.getElementsByClassName("endDate");
     var jobDescription = myForm.jobDescription.value;
@@ -145,39 +147,93 @@ function generateResume()
     */
       myText += ("</div>");
 
-    // Work Experience info section
-    // for (var i = 0; i < 3; i++)
-    // {
-    //     // Work Experience Content Section
-    //     myText += ("<div class=\"experienceContainer\"><div class=\"leftColumn\"><h2 class=\"position\">" + position[i] + "</h2>");
-
-    //     // End of left Column, beginning of right column
-    //     myText += ("</div><div class=\"rightColumn\"><div class=\"experienceContent\"><span class=\"company\">" + company[i]);
-
-    //     // Company span
-    //     myText += ("(" + startDates[i].value.substring(0,4) + " - " + endDates[i].value.substring(0,4) + ")" +"</span>");
-
-    //     myText += ("<ul class=\"jobDescription\">")
-    //     for (var j = 0; j < jobArray.length - 1; j++)
-    //     {
-    //         myText += ("<li>" + jobArray[j] +"</li>");
-    //     }
-    //     // End of work content Section
-    //     myText += ("</ul>");
-    //     // End of Right column
-    //     myText += ("</div>");
-
- 
     /**
      * Start of Key Skills Section
      */
-    // Start of work Experience Section(this line includes section title container)
+    // Start of Key Skills Experience Section(this line includes section title container)
     myText += ("<div class =\"resumeSection\"><div class=\"sectionTitle\"><div class=\"leftColumn\">");
     myText += ("<h1 class=\"profileHeader\">Key Skills</h1>");
     // End of left Column, beginning/end of rightColumn
     myText += ("</div><div class=\"rightColumn\"><div class=\"dividers\"></div></div>");  
     // End of section title container
     myText += ("</div>");
+
+    // var keySkills = [
+    //     myForm.softSkills.value,
+    //     myForm.brandingSkills.value,
+    //     myForm.skillsetChoice.value
+    // ];
+    var skills1 = myForm.softSkills.value;
+    var skillsArray = skills1.split(",");
+
+    // Start of right Column for Key skills content, and right column(skills)
+    myText +=("<div class=\"skillsContainer\"><div class=\"rightColumn\"><div class =\"skillsContent\">");
+    
+    myText += ("<span class=\"softskill\">Soft Skills</span>");
+
+    // // Start of unordered list for key skills description
+    myText += ("<ul class=\"skillsDescription\">");
+    
+    for (var j = 0; j < skillsArray.length; j++)
+    {
+        myText += ("<li>" + skillsArray[j] + "</li>");
+    }
+
+    // End of unordered list for key skills description
+    myText += ("</ul>");
+
+    // End of key skills category container(inside right column(skills category + description))
+    myText += ("</div>");
+    
+    // New  key skill category container(inside right column(skill category + description))
+    myText += ("<div class=\"skillsContent\"><span class=\"softskill\">Branding Skills</span>");
+    
+    var skills2 = myForm.brandingSkills.value;
+    var skillsArray2 = skills2.split(",");
+
+    myText += ("<ul class=\"skillsDescription\">");
+    
+    for (var j = 0; j < skillsArray2.length; j++)
+    {
+        myText += ("<li>" + skillsArray2[j] + "</li>");
+    }
+
+    // End of skills category container (inside right column(skill category + description))
+    myText +=  ("</div>")
+
+    // New  key skill category container(inside right column(skill category + description))
+    myText += ("<div class=\"skillsContent\"><span class=\"softskill\">Misc. Skillsets</span>");
+    
+    var skills3 = myForm.skillsetChoice.value;
+    var skillsArray3 = skills3.split(",");
+
+    myText += ("<ul class=\"skillsDescription\">");
+    
+    for (var j = 0; j < skillsArray3.length; j++)
+    {
+        myText += ("<li>" + skillsArray3[j] + "</li>");
+    }
+
+    // End of skills category container (inside right column(skill category + description))
+    myText +=  ("</div>")
+        
+    // End of right column
+    myText += ("</div>");
+    
+    // End of key Skills container content section(right column)
+    myText += ("</div>")
+
+    /**  
+      * End of key Skills resumeSection (title + content sections)
+    */
+      myText += ("</div>");
+
+
+
+
+
+
+
 
     /**
      *  End of resume Content container
