@@ -124,3 +124,24 @@ img{
     margin-top: 5px;
     padding-left: 18px;
 }
+.softSkill{
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+}
+.skillsContainer{
+    margin-bottom: 15px;
+    position: relative;
+    top: 5px;
+}
+.skillsDescription{
+    margin-top: 5px;
+    padding-left: 18px;
+    width: max-content;
+}
+.skillsContent{
+    margin-bottom: 15px;
+    width:fit-content;
+    float: left;
+    margin-right: 65px;
+}
