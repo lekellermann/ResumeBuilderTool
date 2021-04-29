@@ -113,12 +113,12 @@ function generateResume()
     for (var i = 0; i < 3; i++)
     {
         // Start of work Experience Content Section, end of left column(position)
-        myText += ("<div class=\"experienceContainer\"><div class=\"leftColumn\"><h2 class =\"position\">" + position[0] + "</h2></div>");
+        myText += ("<div class=\"experienceContainer\"><div class=\"leftColumn\"><h2 class =\"position\">" + position[i] + "</h2></div>");
         // Start of right column(company + description) including <div> inside right column(job description)
-        myText += ("<div class=\"rightColumn\"><div class=\"experienceContent\"><span class=\"company\">" + company[0]);
+        myText += ("<div class=\"rightColumn\"><div class=\"experienceContent\"><span class=\"company\">" + company[i]);
         
         // Start and end date inside <span> inside right column(job description)
-        myText += ("(" + startDates[0].value.substring(0,4) + " - " + endDates[0].value.substring(0,4) + ")");
+        myText += ("(" + startDates[i].value.substring(0,4) + " - " + endDates[i].value.substring(0,4) + ")");
         // End of company and date </span>
         myText += ("</span>");
 
