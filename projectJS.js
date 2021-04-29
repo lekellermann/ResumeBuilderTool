@@ -64,6 +64,7 @@ function generateResume()
     myText += ("</div></div></div>")
 
     var developerProfile = myForm.developerProfile.value;
+    var profileArray = developerProfile.split(".");
     
     // Start of main resume content Container and first Section
     myText += ("<div class=\"resumeContent\"><div class=\"resumeSection\">");
@@ -73,11 +74,16 @@ function generateResume()
     myText += ("</div><div class =\"rightColumn\"><div class=\"dividers\"></div></div>")
     // End of section title Container
     myText += ("</div>")
+    
+    // Developer Profile Content Section
+    myText += ("<div class =\"rightColumn\"><div class=\"content\"><ul>");
+    for (var i = 0; i < profileArray.length - 1; i++)
+    {
+        myText += ("<li>" + profileArray[i] +"</li>");
+    }
+    // End of Profile content Section and First Section
+    myText += ("</ul></div></div></div>");
 
-    // Developer Profile Content
-    myText += ("<div class =\"rightColumn\"><div class=\"content\">" + developerProfile + "</div></div>");
-    // End of first Section
-    myText += ("</div>")
     
     // End of resume Content container
     myText += ("</div>");
