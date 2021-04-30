@@ -1,7 +1,6 @@
 // Global variable which references the form resumeForm
 var myForm = document.resumeForm;
 
-
 function isValidEmail(emailAddress)
 {
     // Regualr Expression for a valid email Address
@@ -16,6 +15,7 @@ function validateEmail()
     if (isValidEmail(email.value))
     {
         generateResume();
+  
     }
     else
     {
@@ -25,6 +25,7 @@ function validateEmail()
         email.style.borderColor = "red";
     }
 }
+
 document.getElementById("createResume").addEventListener("click", validateEmail);
 
 function generateResume()
@@ -436,3 +437,4 @@ function generateResume()
 
     // End of the generateResume() functio
 }
+
