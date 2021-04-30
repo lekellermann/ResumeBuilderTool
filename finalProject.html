@@ -64,7 +64,7 @@
         padding-bottom: 10px ;
         left: 0;
     }
-    .startDate, .endDate, #jobInput, .schoolstartDate, .schoolendDate{
+    .startDate, .endDate, #jobInput, .schoolDates{
         width:40%;
     }
     #headshot{
@@ -180,11 +180,11 @@
         <div class="formSection">
             <p>
                 <label for="educationDates">Start Date:</label><br/>
-                <input class="schoolstartDate"type="Date" name="educationDates">
+                <input class="schoolDates"type="Date" name="educationDates">
             </p>
             <p>
                 <label for="educationDates">End Date:</label><br/>
-                <input class="schoolendDate"type="Date" name="educationDates">
+                <input class="schoolDates"type="Date" name="educationDates">
             </p>
             <p id="education">
                 <label for="education">Enter details relating to your Educational Background:</label><br/>
@@ -212,8 +212,8 @@
                 <input id="jobInput" placeholder="Junior Web Dev., Senior Web Dev, etc..." rows="6" name="position1" form=resumeForm></input>
             </p>
             <p>
-                <label for="jobDescription">Position Description:</label><br/>
-                <textarea placeholder="Breif Description, including roles and responsibilities" rows="6" name="jobDescription" form=resumeForm></textarea>
+                <label for="jobDescription1">Position Description:</label><br/>
+                <textarea placeholder="Breif Description, including roles and responsibilities" rows="6" name="jobDescription1" form=resumeForm></textarea>
             </p>
 
             <h2 id="Job">Previous Job</h2>
@@ -234,8 +234,8 @@
                 <input id="jobInput" placeholder="Junior Web Dev., Senior Web Dev, etc..." rows="6" name="position2" form=resumeForm></input>
             </p>
             <p>
-                <label for="jobDescription1">Position Description:</label><br/>
-                <textarea placeholder="Company, Position, Role/Responsibilities" rows="6" name="jobDescription1" form=resumeForm></textarea>
+                <label for="jobDescription2">Position Description:</label><br/>
+                <textarea placeholder="Company, Position, Role/Responsibilities" rows="6" name="jobDescription2" form=resumeForm></textarea>
             </p>
             
             <h2 id="Job">Previous Job</h2>
@@ -256,8 +256,8 @@
                 <input id="jobInput" placeholder="Junior Web Dev., Senior Web Dev, etc..." rows="6" name="position3" form=resumeForm></input>
             </p>
             <p id="jobBox">
-                <label for="jobDescription2">Position Description:</label><br/>
-                <textarea placeholder="Company, Position, Role/Responsibilities" rows="6" name="jobDescription2" form=resumeForm></textarea>
+                <label for="jobDescription3">Position Description:</label><br/>
+                <textarea placeholder="Company, Position, Role/Responsibilities" rows="6" name="jobDescription3" form=resumeForm></textarea>
             </p>
         </div>
         <!-- Business References step of the form -->
@@ -266,21 +266,21 @@
             <p>
                 <h2 id="references">Reference #1</h2>
                 <label for="refernce1"></label><br/>
-                <textarea placeholder="Professional Relationship, Contact information" rows="6" name="refernce1" form=resumeForm></textarea>
+                <textarea placeholder="(comma separated) Name, Professional Relationship, Contact information(phone number)" rows="6" name="reference1" form=resumeForm></textarea>
             </p>
 
             <p>
                 <label for="refernce2">
                     <h2 id="references">Reference #2</h2>
                 </label>
-                <textarea placeholder="Professional Relationship, Contact information" rows="6" name="refernce2" form=resumeForm></textarea>
+                <textarea placeholder="(comma separated) Name,Professional Relationship, Contact information(phone number)" rows="6" name="reference2" form=resumeForm></textarea>
             </p>
 
             <p>
                 <label for="refernce3">
                     <h2 id="references">Reference #3</h2>
                 </label><br/>
-                <textarea placeholder="Professional Relationship, Contact information" rows="6" name="refernce3" form=resumeForm></textarea>
+                <textarea placeholder="(comma separated) Name,Professional Relationship, Contact information(phone number)" rows="6" name="reference3" form=resumeForm></textarea>
             </p>
         </div>
         <p>

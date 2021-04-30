@@ -42,7 +42,8 @@ function generateResume()
 
     // Start of resume Container
     myText += ("<div id=\"resumeContainer\">");
-    
+    myText += ("<div class=\"topBanner\"></div>");
+
     // Start of header Container & Name /Info Container 
     myText += ("<div id=\"headerContainer\"><img src=\"" + headshot + "\"width=\"165\" height=\"165\"><div id=\"nameAndInfo\">");
     myText +=("<h1 id=\"name\"><span id=\"firstName\">" + firstName + "</span><br><span id=\"lastName\">" + lastName + "</span>");
@@ -99,10 +100,14 @@ function generateResume()
         myForm.position3.value
     ];
 
+    var jobDescription = [
+        myForm.jobDescription1.value,
+        myForm.jobDescription2.value,
+        myForm.jobDescription3.value
+    ]
+
     var startDates = document.getElementsByClassName("startDate");
     var endDates = document.getElementsByClassName("endDate");
-    var jobDescription = myForm.jobDescription.value;
-    var jobArray = jobDescription.split(".");
     
     // Start of work Experience Section(this line includes section title container)
     myText += ("<div class =\"resumeSection\"><div class=\"sectionTitle\"><div class=\"leftColumn\">");
@@ -111,9 +116,11 @@ function generateResume()
     myText += ("</div><div class=\"rightColumn\"><div class=\"dividers\"></div></div>");  
     // End of section title container
     myText += ("</div>");
+    var jobDescriptionArray;
 
     for (var i = 0; i < 3; i++)
     {
+        jobDescriptionArray = jobDescription[i].split(".");
         // Start of work Experience Content Section, end of left column(position)
         myText += ("<div class=\"experienceContainer\"><div class=\"leftColumn\"><h2 class =\"position\">" + position[i] + "</h2></div>");
         // Start of right column(company + description) including <div> inside right column(job description)
@@ -126,9 +133,9 @@ function generateResume()
 
         // Start  of unordered List for job description
         myText += ("<ul class=\"jobDescription\">")
-        for (var j = 0; j < jobArray.length - 1; j++)
+        for (var j = 0; j < jobDescriptionArray.length - 1; j++)
         {
-            myText +=("<li>" + jobArray[j] + "</li>")
+            myText +=("<li>" + jobDescriptionArray[j] + "</li>")
         }
         // End of unorder list for job description
         myText += ("</ul>");
@@ -330,7 +337,7 @@ function generateResume()
     var educationArray = education.split(",");
     var degree = educationArray[0];
     var school = educationArray[1];
-    var schoolDates = document.getElementsByName("educationDates");
+    var schoolDates = document.getElementsByClassName("schoolDates");
 
     // Start of Eduucation Content section(contains left column with degree header)
     myText += ("<div class=\"educationContainer\"><div class=\"leftColumn\"><h2 class=\"degree\">" + degree + "</h2></div>");
@@ -354,30 +361,73 @@ function generateResume()
     */
      myText += ("</div>");
 
+     var references = [
+         myForm.reference1.value,
+         myForm.reference2.value,
+         myForm.reference3.value
+     ];
 
      /**
      * Start of references Section
      */
      // Start of Key Skills Experience Section(this line includes section title container)
     myText += ("<div class =\"resumeSection\"><div class=\"sectionTitle\"><div class=\"leftColumn\">");
-    myText += ("<h1 class=\"profileHeader\">Education</h1>");
+    myText += ("<h1 class=\"profileHeader\">References</h1>");
     // End of left Column, beginning/end of rightColumn
     myText += ("</div><div class=\"rightColumn\"><div class=\"dividers\"></div></div>");  
     // End of section title container
     myText += ("</div>");
 
+    var referenceDescriptionArray;
+
+    for (var i = 0; i < 3; i++)
+    {
+        var referenceNumber;
+        if (i == 0)
+        {
+            referenceNumber = 1;
+        }
+        else if(i == 1)
+        {
+            referenceNumber = 2;
+        }
+        else
+        {
+            referenceNumber = 3;
+        }
+
+        referenceDescriptionArray = references[i].split(",")
+        //Start of reference section, start&end of left column(reference#)
+        myText += ("<div class=\"\"referenceContainer><div class=\"leftColumn\"><h2 class=\"referenceHeader\">Reference" + referenceNumber + "</h2>" + "</div>");
+
+        // Start of right column(Professional relationship + contact info) including <div> inside right column(reference description)
+        myText += ("<div class=\"rightColumn\"><div class=\"referenceContent\"><div class=\"referenceInfoContainer\"><span class=\"referenceName\">" + referenceDescriptionArray[0] + ", ");
+        myText += ("</span><span class=\"referenceRelationship\">" + referenceDescriptionArray[1]);
+        
+        // Relationship Inisde <span> inside right column (reference description)
+        myText += ("</span></div><span class=\"referenceContact\">" + referenceDescriptionArray[2] + "</span>");
+        
+        // End of reference description <div> inside right column (relationship + contact info)
+        myText += ("</div>");
+        
+        // End of right column(reference relationship + contact info)
+        myText+= ("</div>")
+        
+        // End of references container
+        myText += ("</div>")
+    }  
     /**  
       * End of References resumeSection (title + content)
     */
      myText += ("</div>");
 
-
-
-
     /**
      *  End of resume Content container
      */
     myText += ("</div>");
+    
+    // Bottom banner
+    myText += ("<div class=\"bottomBanner\"></div>");
     // End of Pop Up window 
     myText += ("\n</div></body>\n</html>");
     
