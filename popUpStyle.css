@@ -158,7 +158,7 @@ img{
     padding-right:30px;
     position: relative;
     float: right; 
-    right: 25px;
+    left: -60px;
   }
   .techSkill{
     font-weight: bold;
@@ -209,7 +209,7 @@ img{
     font-weight: bold;
     font-size: 20px;
     position: relative;
-    top: -60px;
+    top: -20px;
 }
 .referenceContact{
     font-weight: 250px;
