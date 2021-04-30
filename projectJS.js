@@ -79,7 +79,7 @@ function generateResume()
     myText += ("</div>")
     
     // Developer Profile Content Section
-    myText += ("<div class =\"rightColumn\"><div class=\"content\"><ul>");
+    myText += ("<div class =\"rightColumn\"><div class=\"content\"><ul id=\"profileList\">");
     for (var i = 0; i < profileArray.length - 1; i++)
     {
         myText += ("<li>" + profileArray[i] +"</li>");
