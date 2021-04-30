@@ -35,6 +35,10 @@ img{
     left: 245px;
     width: 31%;
 }
+ul#profileList {
+    padding-left: 20px;
+    padding-top: 5px;
+}
 #lastName{
     color: #bd2509
 }
@@ -155,7 +159,7 @@ img{
     padding-left: 18px;
 }
 .techSkillsrightColumn {
-    padding-right:30px;
+    padding-right:-25px;
     position: relative;
     float: right; 
     left: -60px;
